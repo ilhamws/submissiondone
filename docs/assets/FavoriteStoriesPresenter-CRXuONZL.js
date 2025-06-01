@@ -1,0 +1,1 @@
+class e{constructor(t,i){this.view=t,this.storyDatabase=i,this.init()}async init(){this.view.showLoading();try{await this.storyDatabase.init();const t=await this.storyDatabase.getFavoriteStories();this.view.render(t)}catch(t){this.view.showError(t.message),this.view.onRetry(()=>this.init())}}}export{e as FavoriteStoriesPresenter};
